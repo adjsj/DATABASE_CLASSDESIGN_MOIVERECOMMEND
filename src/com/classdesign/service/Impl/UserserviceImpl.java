@@ -11,4 +11,28 @@ public class UserserviceImpl implements Userservice {
         UserDao userDao=new UserDaoImpl();
         return userDao.login(user);
     }
+    public User ifExitUser(User user){
+        UserDao userDao=new UserDaoImpl();
+        return userDao.ifExitUser(user);
+    }
+
+    @Override
+    public User ifExitphone_number(User user) {
+        UserDao userDao=new UserDaoImpl();
+        return userDao.ifExitphone_number(user);
+    }
+
+    public boolean creatNewUser(User user){
+        UserDao userdao=new UserDaoImpl();
+        if(userdao.creatNewUser(user)){
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean reset_pwd(User user) {
+        UserDao userDao=new UserDaoImpl();
+        return userDao.reset_pwd(user);
+    }
 }

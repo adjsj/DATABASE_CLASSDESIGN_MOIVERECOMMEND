@@ -50,8 +50,8 @@
                     <nav>
                         <ul class="nav masthead-nav">
                             <li class="active"><a href="#">Home</a></li>
-                            <li><a href="view/login.jsp">Sign in</a></li>
-                            <li><a href="view/signup.jsp">Sign up</a></li>
+                            <li><a href="/view/login.jsp">Sign in</a></li>
+                            <li><a href="/view/signup.jsp">Sign up</a></li>
                         </ul>
                     </nav>
                 </div>

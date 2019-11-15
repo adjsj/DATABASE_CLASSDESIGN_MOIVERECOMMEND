@@ -1,3 +1,4 @@
+
 <%--
   Created by IntelliJ IDEA.
   User: zhanghesu
@@ -35,18 +36,25 @@
 </head>
 
 <body>
-
+<jsp:useBean id="pwd_warning" scope="request" class="com.classdesign.domain.Warning"/>
+<jsp:useBean id="phone_number_warning" scope="request" class="com.classdesign.domain.Warning"/>
+<jsp:useBean id="username_warning" scope="request" class="com.classdesign.domain.Warning"/>
 <div class="container">
 
-    <form class="form-signin" action="/UserservletRegist">
+    <form class="form-signin" action="/UserservletRegist" method="post">
         <h2 class="form-signin-heading">Sign up</h2>
-        <label for="username" class="sr-only">Username</label>
+        <label>
+            <font color="red">${username_warning.message}</font>
+            <font color="red">${phone_number_warning.message}</font>
+            <font color="red">${pwd_warning.message}</font>
+        </label>
+        <label for="username" class="">Username:</label>
         <input type="text" id="username" name="username" class="form-control" placeholder="Input your username····" required autofocus>
-        <label for="password" class="sr-only">Password</label>
-        <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
-        <label for="password1" class="sr-only">Password</label>
+        <label for="password" class="">Password:</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Password" required autofocus>
+        <label for="password1" class="">Password Again:</label>
         <input type="password" id="password1" name="password1" class="form-control" placeholder="Please repeat password" required>
-        <label for="phone_number" class="sr-only">Password</label>
+        <label for="phone_number" class="">Phone number:</label>
         <input type="text" id="phone_number" name="phone_number" class="form-control" placeholder="Please input your phone number" required>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
     </form>

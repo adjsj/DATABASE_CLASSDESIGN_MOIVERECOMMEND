@@ -11,10 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-<form method="post" action="/login">
-    <input type="text" name="username" id="username" >
-    <input type="password" name="password" id="password">
-    <input type="submit" value="提交">
+
 
 </form>
 </body>

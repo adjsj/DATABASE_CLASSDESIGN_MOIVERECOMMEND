@@ -19,31 +19,30 @@ public class Movieservlet extends HttpServlet{
         if(methodname.equals("findAll")){
             findAll(request,response);
         }else if(methodname.equals("search")){
-            System.out.println(111111);
             search(request,response);
 
         }
     }
 
+    public void delete(HttpServletRequest request,HttpServletResponse response) throws IOException,ServletException{
+
+    }
     public void search(HttpServletRequest request, HttpServletResponse response) throws IOException,ServletException{
         int id= Integer.valueOf(request.getParameter("id"));
         Movie movie=new Movie();
         movie.setMovie_id(id);
         Movieservice movieservice=new MovieserviceImpl();
         Movie movieexit=movieservice.getbyID(movie);
-        request.getSession().setAttribute("movie",movieexit);
+        request.setAttribute("movie",movieexit);
         request.getRequestDispatcher("/view/movieshow.jsp").forward(request,response);
 
     }
-
-    public void findAll(HttpServletRequest request,HttpServletResponse response) throws IOException,ServletException{
+        public void findAll(HttpServletRequest request,HttpServletResponse response) throws IOException,ServletException{
         int count=0;
         Movieservice movieservice=new MovieserviceImpl();
         List<Movie> movies=movieservice.findAll();
         for (Movie movie:movies) {
             count++;
-            System.out.println(movie.getMovie_id());
-            System.out.println(movie.getMovie_name());
             request.setAttribute("movie"+count,movie);
         }
         request.getRequestDispatcher("/view/homepage.jsp").forward(request,response);

@@ -130,13 +130,31 @@
 <!-- Wrap the rest of the page in another container to center all the content. -->
 
 <div class="container marketing">
+<%--    <%--%>
+<%--        int count=0;--%>
+<%--        List<Movie> movie= (List<Movie>)request.getAttribute("movies");--%>
+<%--        for(Movie movie4:movie ) {--%>
+<%--            count++;--%>
+<%--    %>--%>
+<%--    <div class="row">--%>
+<%--        <div class="col-lg-4">--%>
+<%--            <img class="img-circle" src="${movie4.movie_pic_context}" alt="Generic placeholder image" width="140" height="140">--%>
+<%--            <h2>${movie4.movie_name}</h2>--%>
+<%--            <p class="te">${movie4.movie_introduce}<br>又名:${movie1.movie_another_name}</p>--%>
+<%--            <p><a class="btn btn-default" href="${pageContext.request.contextPath}/homepage?method=search&id=${movie4.movie_id}" role="button">View details &raquo;</a></p>--%>
+<%--        </div>--%>
+<%--    <%--%>
+
+<%--        }--%>
+<%--    %>--%>
+
 
     <!-- Three columns of text below the carousel -->
     <div class="row">
         <div class="col-lg-4">
             <img class="img-circle" src="${movie1.movie_pic_context}" alt="Generic placeholder image" width="140" height="140">
             <h2>${movie1.movie_name}</h2>
-            <p>${movie1.movie_introduce}<br>又名:${movie1.movie_another_name}</p>
+            <p class="te">${movie1.movie_introduce}<br>又名:${movie1.movie_another_name}</p>
             <p><a class="btn btn-default" href="${pageContext.request.contextPath}/homepage?method=search&id=${movie1.movie_id}" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">

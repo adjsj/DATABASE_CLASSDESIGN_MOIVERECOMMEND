@@ -36,7 +36,9 @@
 </head>
 
 <body>
-<jsp:useBean id="movie" scope="request" class="com.classdesign.domain.Movie"/>
+<jsp:useBean id="movie1" scope="request" class="com.classdesign.domain.Movie"/>
+<jsp:useBean id="movie2" scope="request" class="com.classdesign.domain.Movie"/>
+<jsp:useBean id="movie3" scope="request" class="com.classdesign.domain.Movie"/>
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -67,8 +69,8 @@
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
                 <li class="active"><a href="#">电影概述 <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">Reports</a></li>
-                <li><a href="#">Analytics</a></li>
+                <li><a href="#">电影短评</a></li>
+                <li><a href="#">小组讨论</a></li>
                 <li><a href="#">Export</a></li>
             </ul>
             <ul class="nav nav-sidebar">
@@ -91,8 +93,8 @@
 
             <div class="row placeholders">
                 <div class="col-xs-6 col-sm-3 placeholder">
-                    <img src="${movie.movie_pic_context}" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-                    <h4>Label</h4>
+                    <img src="${movie.movie_pic_context}" width="200" height="200" class="img-rounded" alt="Generic placeholder thumbnail">
+                    <h4>又名:${movie.movie_another_name}</h4>
                     <span class="text-muted">${movie.movie_introduce}</span>
                 </div>
 <%--                <div class="col-xs-6 col-sm-3 placeholder">--%>
@@ -110,6 +112,18 @@
 <%--                    <h4>Label</h4>--%>
 <%--                    <span class="text-muted">Something else</span>--%>
 <%--                </div>--%>
+                <div class="panel panel-default col-xs-12 col-sm-6 ">
+                    <ul class="list-group">
+                        <li class="list-group-item">导演:</li>
+                        <li class="list-group-item">编剧:</li>
+                        <li class="list-group-item">主演:</li>
+                        <li class="list-group-item">类型:</li>
+                        <li class="list-group-item">制片国家:</li>
+                        <li class="list-group-item">上映日期:</li>
+                        <li class="list-group-item">片长:</li>
+                    </ul>
+                </div>
+
             </div>
 
             <h2 class="sub-header">Section title</h2>

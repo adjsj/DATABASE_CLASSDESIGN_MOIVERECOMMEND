@@ -1,44 +1,41 @@
 <%--
   Created by IntelliJ IDEA.
   User: zhanghesu
-  Date: 2019/11/15
-  Time: 11:25 下午
+  Date: 2019/11/16
+  Time: 4:46 下午
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Dashboard Template for Bootstrap</title>
+
+
+    <title>Home Page</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/docs/dist/css/bootstrap.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="${pageContext.request.contextPath}/docs/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="${pageContext.request.contextPath}/docs/examples/dashboard/dashboard.css" rel="stylesheet">
-
+    <link href="${pageContext.request.contextPath}/docs/examples/cover/cover.css" rel="stylesheet">
 
     <script src="${pageContext.request.contextPath}/docs/assets/js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-
 <body>
-<jsp:useBean id="movie1" scope="request" class="com.classdesign.domain.Movie"/>
-<jsp:useBean id="movie2" scope="request" class="com.classdesign.domain.Movie"/>
-<jsp:useBean id="movie3" scope="request" class="com.classdesign.domain.Movie"/>
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -96,32 +93,6 @@
                     <img src="${movie.movie_pic_context}" width="200" height="200" class="img-rounded" alt="Generic placeholder thumbnail">
                     <h4>又名:${movie.movie_another_name}</h4>
                     <span class="text-muted">${movie.movie_introduce}</span>
-                </div>
-<%--                <div class="col-xs-6 col-sm-3 placeholder">--%>
-<%--                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">--%>
-<%--                    <h4>Label</h4>--%>
-<%--                    <span class="text-muted">Something else</span>--%>
-<%--                </div>--%>
-<%--                <div class="col-xs-6 col-sm-3 placeholder">--%>
-<%--                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">--%>
-<%--                    <h4>Label</h4>--%>
-<%--                    <span class="text-muted">Something else</span>--%>
-<%--                </div>--%>
-<%--                <div class="col-xs-6 col-sm-3 placeholder">--%>
-<%--                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">--%>
-<%--                    <h4>Label</h4>--%>
-<%--                    <span class="text-muted">Something else</span>--%>
-<%--                </div>--%>
-                <div class="panel panel-default col-xs-12 col-sm-6 ">
-                    <ul class="list-group">
-                        <li class="list-group-item">导演:</li>
-                        <li class="list-group-item">编剧:</li>
-                        <li class="list-group-item">主演:</li>
-                        <li class="list-group-item">类型:</li>
-                        <li class="list-group-item">制片国家:</li>
-                        <li class="list-group-item">上映日期:</li>
-                        <li class="list-group-item">片长:</li>
-                    </ul>
                 </div>
 
             </div>
